@@ -25,13 +25,6 @@ form {
   flex-direction: column;
 }
 
-#dm{
-padding-top: 0.8rem;
-align-items: center;
-width: 414px;
-height: 94px;
-padding-left: 30rem;
-}
 
 .header{
   padding-top: 2rem;
