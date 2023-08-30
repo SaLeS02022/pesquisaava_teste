@@ -1,9 +1,7 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username")
 const tel = document.getElementById("tel")
-const Avaliacao_atendimento = document.getElementById("Avaliacao_atendimento")
-const Avaliacao_produto = document.getElementById("Avaliacao_produto")
-const solucao = document.getElementById("solucao")
+const inidicacao = document.getElementById("indicacao")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -11,103 +9,78 @@ form.addEventListener("submit", (event) => {
   checkForm();
 })
 
+
+
 username.addEventListener("blur", () => {
-  checkInputUsername();
+  checkInputusername();
 })
 
 tel.addEventListener("blur", () =>{
-  checkInputTel();
+  checkInputtel();
 })
 
-Avaliacao_atendimento.addEventListener("blur", () => {
-  checkInputAvaliacao_atendimento();
+indicacao.addEventListener("blur", () => {
+  checkInputindicacao();
 })
 
-Avaliacao_atendimento.addEventListener("blur", () => {
-  checkInputAvaliacao_produto();
-})
-
-solucao.addEventListener("blur", () => {
-  checkInputsolucao();
-})
-
-function checkInputUsername(){
+function checkInputusername() {
   const usernameValue = username.value;
 
-  if(usernameValue === ""){
-    errorInput(username, "Insira seu nome...")
-  }else{
+  if (usernameValue === "") {
+    errorInput(username, "Preencha um username!")
+  } else {
     const formItem = username.parentElement;
     formItem.className = "form-content"
   }
 
 }
 
-function checkInputTel(){
+function checkInputtel() {
   const telValue = tel.value;
 
-  if(telValue === ""){
-    errorInput(tel, "Insira seu contato...")
+  if (telValue === "") {
+    errorInput(tel, "Preencha um username!")
   } else {
     const formItem = tel.parentElement;
-    formItem.className  = "form-content"
-  }
-}
-
-function checkInputAvaliacao_atendimento(){
-  const Avaliacao_atendimentoValue = Avaliacao_atendimento.value;
-
-  if(Avaliacao_atendimentoValue === ""){
-    errorInput(Avaliacao_atendimento, "por favor, digite um número!")
-  }else{
-    const formItem = Avaliacao_atendimento.parentElement;
     formItem.className = "form-content"
   }
 
 }
 
-function checkInputAvaliacao_produto(){
-  const Avaliacao_produtoValue = Avaliacao_produto.value;
+function checkInputindicacao() {
+  const indicacaoValue = indicacao.value;
 
-  if(Avaliacao_produtoValue === ""){
-    errorInput(Avaliacao_produto, "por favor digite um número!")
+  if (indicacaoValue === "") {
+    errorInput(indicacao, "Preencha um username!")
   } else {
-    const formItem = Avaliacao_produto.parentElement;
+    const formItem = indicacao.parentElement;
     formItem.className = "form-content"
   }
+
 }
 
-function checkInputsolucao(){
-  const solucaoValue = solucao.value;
 
-  if(solucaoValue === ""){
-    errorInput(solucao, "descreva sua experiência...")
-  } else {
-    const formItem = solucao.parentElement;
-    formItem.className = "form-content"
-  }
-}
+function checkForm() {
+  checkInputusername();
+  checkInputtel();
+  checkInputindicacao();
 
-function checkForm(){
-  checkInputUsername();
-  checkInputTel();
-  checkInputAvaliacao_atendimento();
-  checkInputAvaliacao_produto();
-  checkInputsolucao();
+
 
   const formItems = form.querySelectorAll(".form-content")
-  
-  const isValid = [...formItems].every( (item) => {
+
+  const isValid = [...formItems].every((item) => {
     return item.className === "form-content"
   });
 
-  if(isValid){
-    alert("RESPOSTAS ENVIADAS, OBRIGADO POR RESPONDER")
+  if (isValid) {
+    alert("CADASTRADO COM SUCESSO!")
   }
 
 }
 
-function errorInput(input, message){
+
+function errorInput(input, message) {
   const formItem = input.parentElement;
   const textMessage = formItem.querySelector("a")
 
@@ -116,3 +89,20 @@ function errorInput(input, message){
   formItem.className = "form-content error"
 
 }
+
+const emojis = document.querySelectorAll('.emoji');
+
+emojis.forEach(emoji => {
+  emoji.addEventListener('click', () => {
+    emojis.forEach(e => e.classList.remove('selected'));
+    emoji.classList.add('selected');
+  });
+});
+
+const ratingSlider = document.getElementById("ratingSlider");
+const ratingValue = document.getElementById("ratingValue");
+
+ratingSlider.addEventListener("input", () => {
+  const value = ratingSlider.value;
+  ratingValue.textContent = value;
+});
