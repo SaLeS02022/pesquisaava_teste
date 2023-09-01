@@ -19,11 +19,15 @@ body {
   justify-content: center;
 }
 
+
+
 .container {
-  background: white;
-  min-width: 320px;
+  background: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  min-width: 1px;
   min-height: 40vh;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
@@ -44,6 +48,7 @@ form {
 }
 
 .header {
+  text-align: center;
   padding-top: 2rem;
   margin-bottom: 2rem;
   position: relative;
@@ -97,6 +102,13 @@ header::before {
   background: rgba(217, 217, 217, 0.00);
   cursor: pointer;
 }
+
+.form button:hover{
+  font-size: 1rem;
+  border: 2.5px solid #52658D;
+  color: #52658D;
+}
+
 
 #username {
   margin: 15px 25px;
@@ -231,7 +243,7 @@ header::before {
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #A9CF46 4%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #A9CF46 4%);
-  background-position: -200px 0;
+  background-position: -20px 0;
   background-size: 22.5rem 100%;
   background-repeat: no-repeat;
   color: #A9CF46;
@@ -282,7 +294,66 @@ header::before {
   visibility: visible !important;
 }
 
+#produto {
+  margin: 15px 25px;
+  width: 22.5rem;
+  border: none;
+  padding: 12px 0;
+  border-bottom: solid 1.2px #A9CF46;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #A9CF46 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #A9CF46 4%);
+  background-position: -20px 0;
+  background-size: 22.5rem 100%;
+  background-repeat: no-repeat;
+  color: #A9CF46;
+}
 
+#produto,
+#produto:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+#produto::-webkit-input-placeholder {
+  font-family: 'roboto', sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#produto:focus::-webkit-input-placeholder,
+#produto:valid::-webkit-input-placeholder {
+  color: #A9CF46;
+  font-size: 11px;
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-0.90rem);
+  visibility: visible !important;
+}
+
+
+#produto,
+#produto:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+#produto::-webkit-input-placeholder {
+  font-family: 'roboto', sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#produto:focus::-webkit-input-placeholder,
+#produto:valid::-webkit-input-placeholder {
+  color: #A9CF46;
+  font-size: 11px;
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-0.90rem);
+  visibility: visible !important;
+}
 
 
 
@@ -313,15 +384,6 @@ header::before {
   color: #A9CF46;
 }
 
-/*INPUT_RANGE*/
-.slider-container {
-  text-align: center;
-}
-
-.rating-label {
-  font-size: 18px;
-  margin-top: 10px;
-}
 
 /*LABEL_Ava_emoji*/
 .label_Avaemoji {
