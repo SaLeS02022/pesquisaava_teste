@@ -17,6 +17,12 @@
 <body>
 
   <div class="container">
+    <!--Div para chamar a logo-->
+    <div class="logo">
+      <img src="logo.png" style="width: 22rem; margin: 5px;  margin-left: 25px;  margin-top: 1rem; margin-bottom: -2rem; display: flex;">
+    </div>
+
+    <!--Title-->
     <section class="header">
       <h2>PESQUISA DE SATISFAÇÃO</h2>
     </section>
@@ -40,6 +46,13 @@
               required />
           </div>
 
+          <!--INPUT_PRODUTO-->
+        <form id="form" class="form">
+          <div class="form-content">
+            <input type="text" id="produto" placeholder="Indique aqui um produto que gostaria que trabalhássemos..."
+              required />
+          </div>
+
           <!--
         <form id="form" class="form">
           <div class="form-content">
@@ -59,7 +72,7 @@
               </div>
               <ul id="Ava_emoji">
                 <li class="emoji" id="angry" onclick="selectEmoji('angry')">&#128546</li>
-                <li class="emoji" id="not-satisfied" onclick="selectEmoji('not-satisfied')">&#128532</li>
+                <li class="emoji" id="not-satisfied" onclick="selectEmoji('not-satisfied')">&#128562</li>
                 <li class="emoji" id="very-satisfied" onclick="selectEmoji('very-satisfied')" required>&#128525</li>
               </ul>
             </div>
