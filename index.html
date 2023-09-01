@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+
+  <title> PESQUISA DE SATISFAÇÃO</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <!--Div para chamar a logo-->
+    <div class="logo">
+      <img src="logo.png" style="width: 15rem; margin:auto;  margin-top: 1rem; margin-bottom: -2rem; display: flex;">
+    </div>
+
+    <!--Title-->
+    <section class="header">
+      <h2>PESQUISA DE SATISFAÇÃO</h2>
+    </section>
+
+    <!--INPUT_NAME-->
+    <form id="form" class="form">
+      <div class="form-content">
+        <input type="text" id="username" placeholder="Digite seu nome..." required />
+      </div>
+
+      <!--INPUT_WHATS-->
+      <form id="form" class="form">
+        <div class="form-content">
+          <input type="tel" id="tel" placeholder="whatssap (xx) xxxxx-xxxx..." required />
+        </div>
+
+        <!--INPUT_INDICAR-->
+        <form id="form" class="form">
+          <div class="form-content">
+            <input type="text" id="indicacao" placeholder="Qual disposto você está a indicar nossos produtos/serviços?"
+              required />
+          </div>
+
+          <!--INPUT_PRODUTO-->
+        <form id="form" class="form">
+          <div class="form-content">
+            <input type="text" id="produto" placeholder="Indique aqui um produto que gostaria que trabalhássemos..."
+              required />
+          </div>
+
+          <!--
+        <form id="form" class="form">
+          <div class="form-content">
+            <div class="slider-container">
+  <input type="range" id="ratingSlider" min="1" max="10" value="5" step="1">
+  <p class="rating-label">Avaliação: <span id="ratingValue">5</span></p>
+</div>
+          </div> -->
+
+
+
+          <!--AVALIACAO ATENDIMENTO-->
+          <div class="form-content">
+            <div class="Ava_emoji">
+              <div class="label_Avaemoji">
+                <label for="Ava_emoji">Avalie sua experiência:</label>
+              </div>
+              <ul id="Ava_emoji">
+                <li class="emoji" id="angry" onclick="selectEmoji('angry')">&#128546</li>
+                <li class="emoji" id="not-satisfied" onclick="selectEmoji('not-satisfied')">&#128562</li>
+                <li class="emoji" id="very-satisfied" onclick="selectEmoji('very-satisfied')" required>&#128525</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!--BOTAO PARA ENVIAR RESPOSTAS-->
+          <div class="btn">
+            <button type="submit"> ENVIAR </button>
+          </div>
+        </form>
+
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
